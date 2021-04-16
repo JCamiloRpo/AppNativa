@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">VacuMap</string>
+    <string name="logo">Logo</string>
+    <string name="agregar">AGREGAR</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="imagen_mascota">Imagen mascota</string>
+    <string name="editar_imagen">Editar imagen</string>
+    <string name="nombre_mascota">Nombre mascota</string>
+    <string name="tipo_de_mascota">Tipo de mascota</string>
+    <string name="edad">Edad</string>
+    <string name="vacuna">Vacuna</string>
+    <string name="activa">Activa</string>
+    <string name="fecha">Fecha</string>
+    <string name="crear_vacuna">CREAR VACUNA</string>
+</resources>
