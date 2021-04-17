@@ -55,38 +55,33 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/BtnEditar"
+                android:id="@+id/BtnEditVac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/black"
                 android:gravity="center"
                 android:padding="15dp"
-                android:text="Editar"
-                android:textColor="#FFFFFF"
+                android:text="@string/editar"
                 android:textStyle="bold"
                 app:cornerRadius="10dp" />
 
             <Button
-                android:id="@+id/BtnEliminar"
+                android:id="@+id/BtnRemoveVac"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="40dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/white"
+                android:backgroundTint="@color/blue_dark"
                 android:gravity="center"
                 android:padding="15dp"
-                android:text="Eliminar"
+                android:text="@string/eliminar"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                app:strokeColor="@color/black"
-                app:strokeWidth="2dp" />
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

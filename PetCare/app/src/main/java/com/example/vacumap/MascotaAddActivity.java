@@ -8,29 +8,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class VacunaEditActivity extends AppCompatActivity {
-    Button btnEdit, btnRemove;
+public class MascotaAddActivity extends AppCompatActivity {
+    Button btnGuardar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_vacuna_edit);
+        setContentView(R.layout.activity_mascota_add);
 
         ActionBar menu = getSupportActionBar();
         menu.setDisplayHomeAsUpEnabled(true);
 
-        btnEdit = (Button) findViewById(R.id.BtnEditVac);
-        btnEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), VacunaActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
-
-        btnRemove = (Button) findViewById(R.id.BtnRemoveVac);
-        btnRemove.setOnClickListener(new View.OnClickListener() {
+        btnGuardar = (Button) findViewById(R.id.BtnSavePet);
+        btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), VacunaActivity.class);

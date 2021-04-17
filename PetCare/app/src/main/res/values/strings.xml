@@ -12,4 +12,8 @@
     <string name="activa">Activa</string>
     <string name="fecha">Fecha</string>
     <string name="crear_vacuna">CREAR VACUNA</string>
+    <string name="editar">Editar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="vacunas">Vacunas</string>
+    <string name="mascotas">Mascotas</string>
 </resources>

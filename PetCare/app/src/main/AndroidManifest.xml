@@ -8,16 +8,44 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.VacuMap">
-        <activity android:name=".VacunaEditActivity"/>
-        <activity android:name=".VacunaAddActivity" />
-        <activity android:name=".VacunaActivity" />
+        android:theme="@style/Theme.PetCare">
         <activity android:name=".MascotaActivity" />
-        <activity android:name=".MascotaProfileActivity" />
-        <activity android:name=".SplashActivity"
+        <activity android:name=".MascotaAddActivity"
+            android:parentActivityName=".MascotaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MascotaActivity" />
+        </activity>
+        <activity android:name=".MascotaEditActivity"
+            android:parentActivityName=".VacunaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".VacunaActivity" />
+        </activity>
+        <activity android:name=".VacunaActivity"
+            android:parentActivityName=".MascotaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MascotaActivity" />
+        </activity>
+        <activity android:name=".VacunaAddActivity"
+            android:parentActivityName=".VacunaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".VacunaActivity" />
+        </activity>
+        <activity android:name=".VacunaEditActivity"
+            android:parentActivityName=".VacunaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".VacunaActivity" />
+        </activity>
+        <activity
+            android:name=".SplashActivity"
             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

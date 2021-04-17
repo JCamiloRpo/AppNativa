@@ -24,7 +24,7 @@
             android:hint="@string/vacuna"
             android:inputType="textPersonName" />
 
-        <SwitchCompat
+        <Switch
             android:id="@+id/swtActiva"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,15 +50,13 @@
             android:inputType="date" />
 
         <Button
-            android:id="@+id/BtnAddVacuna"
+            android:id="@+id/BtnSaveVac"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="40dp"
-            android:backgroundTint="@color/black"
             android:gravity="center"
             android:padding="15dp"
             android:text="@string/crear_vacuna"
-            android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:cornerRadius="10dp" />
     </LinearLayout>
