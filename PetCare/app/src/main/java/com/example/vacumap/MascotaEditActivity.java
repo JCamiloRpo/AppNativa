@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MascotaEditActivity extends AppCompatActivity {
-    Button btnGuardar;
+    Button btnGuardar, btnRemove;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,18 @@ public class MascotaEditActivity extends AppCompatActivity {
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), VacunaActivity.class);
+                /*Intent i = new Intent(getApplicationContext(), VacunaActivity.class);
+                startActivity(i);
+                finish();*/
+                onBackPressed();
+            }
+        });
+
+        btnRemove = (Button) findViewById(R.id.BtnRemovePet);
+        btnRemove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), MascotaActivity.class);
                 startActivity(i);
                 finish();
             }

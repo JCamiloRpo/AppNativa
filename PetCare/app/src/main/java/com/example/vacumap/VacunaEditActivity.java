@@ -26,6 +26,7 @@ public class VacunaEditActivity extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), VacunaActivity.class);
                 startActivity(i);
                 finish();
+                //onBackPressed();
             }
         });
 
@@ -36,6 +37,7 @@ public class VacunaEditActivity extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(), VacunaActivity.class);
                 startActivity(i);
                 finish();
+                //onBackPressed();
             }
         });
     }

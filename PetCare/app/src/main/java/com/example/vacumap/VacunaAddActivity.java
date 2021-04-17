@@ -23,9 +23,10 @@ public class VacunaAddActivity extends AppCompatActivity {
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), VacunaActivity.class);
+                /*Intent i = new Intent(getApplicationContext(), VacunaActivity.class);
                 startActivity(i);
-                finish();
+                finish();*/
+                onBackPressed();
             }
         });
     }
