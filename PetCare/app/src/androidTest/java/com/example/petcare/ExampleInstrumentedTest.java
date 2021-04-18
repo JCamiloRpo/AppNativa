@@ -1,4 +1,4 @@
-package com.example.vacumap;
+package com.example.petcare;
 
 import android.content.Context;
 

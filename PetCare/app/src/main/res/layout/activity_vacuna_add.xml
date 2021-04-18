@@ -54,9 +54,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="40dp"
+            android:backgroundTint="@color/red_dark"
             android:gravity="center"
             android:padding="15dp"
             android:text="@string/crear_vacuna"
+            android:textColor="@color/white"
             android:textStyle="bold"
             app:cornerRadius="10dp" />
     </LinearLayout>

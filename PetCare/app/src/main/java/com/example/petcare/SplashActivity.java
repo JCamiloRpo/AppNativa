@@ -1,4 +1,4 @@
-package com.example.vacumap;
+package com.example.petcare;
 
 import android.app.Activity;
 import android.content.Intent;

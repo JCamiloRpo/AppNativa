@@ -20,7 +20,7 @@
             android:layout_height="150dp"
             android:layout_margin="20dp"
             android:contentDescription="@string/imagen_mascota"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:src="@drawable/logo" />
 
         <TextView
             android:id="@+id/TxtImg"
@@ -74,9 +74,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="40dp"
+            android:backgroundTint="@color/red_dark"
             android:gravity="center"
             android:padding="15dp"
             android:text="@string/guardar"
+            android:textColor="@color/white"
             android:textStyle="bold" />
     </LinearLayout>
 
