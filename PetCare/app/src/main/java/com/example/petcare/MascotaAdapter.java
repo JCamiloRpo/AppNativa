@@ -26,7 +26,7 @@ public class MascotaAdapter extends BaseAdapter {
     public MascotaItem getItem(int position) { return items.get(position); }
 
     @Override
-    public long getItemId(int position) { return items.get(position).getIdMascota(); }
+    public long getItemId(int position) { return items.get(position).getMascotaID(); }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
