@@ -1,12 +1,12 @@
 package com.example.petcare;
 
-public class MascotaView {
+public class MascotaItem {
 
     private long idMascota;
     private int imagen;
     private String nombre, edad, vacuna;
 
-    public MascotaView(long idMascota, int imagen, String nombre, String edad, String vacuna) {
+    public MascotaItem(long idMascota, int imagen, String nombre, String edad, String vacuna) {
         this.idMascota = idMascota;
         this.imagen = imagen;
         this.nombre = nombre;

@@ -8,16 +8,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 public class MascotaAdapter extends BaseAdapter {
     private Activity activity;
-    private ArrayList<MascotaView> items;
+    private ArrayList<MascotaItem> items;
 
-    public MascotaAdapter(Activity activity, ArrayList<MascotaView> items){
+    public MascotaAdapter(Activity activity, ArrayList<MascotaItem> items){
         this.activity = activity;
         this.items = items;
     }
@@ -26,14 +23,14 @@ public class MascotaAdapter extends BaseAdapter {
     public int getCount() { return items.size(); }
 
     @Override
-    public MascotaView getItem(int position) { return items.get(position); }
+    public MascotaItem getItem(int position) { return items.get(position); }
 
     @Override
     public long getItemId(int position) { return items.get(position).getIdMascota(); }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        MascotaView item = items.get(position);
+        MascotaItem item = items.get(position);
 
         if(convertView == null){
             LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
