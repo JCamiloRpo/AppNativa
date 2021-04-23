@@ -4,10 +4,18 @@ import android.content.ContentValues;
 
 public class MascotaItem {
 
-    private int MascotaID, imagen;
-    private String nombre, tipo, edad, vacuna;
+    private int MascotaID, imagen, edad;
+    private String nombre, tipo, vacuna;
 
-    public MascotaItem(int MascotaID, int imagen, String nombre, String tipo, String edad, String vacuna) {
+    public MascotaItem(int MascotaID, int imagen, String nombre, int edad, String vacuna) {
+        this.MascotaID = MascotaID;
+        this.imagen = imagen;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.vacuna = vacuna;
+    }
+
+    public MascotaItem(int MascotaID, int imagen, String nombre, String tipo, int edad, String vacuna) {
         this.MascotaID = MascotaID;
         this.imagen = imagen;
         this.nombre = nombre;
@@ -22,7 +30,9 @@ public class MascotaItem {
 
     public String getNombre() { return nombre; }
 
-    public String getEdad() { return edad; }
+    public String getTipo() { return tipo; }
+
+    public int getEdad() { return edad; }
 
     public String getVacuna() { return vacuna; }
 

@@ -17,10 +17,16 @@ public class ConexionSQLite {
      * Reciben el objeto/registro que se desea Insertar.
      * @return resultado de la insercion
      */
-    //Insert
     public long Insert(MascotaItem mascota){
         db = conn.getWritableDatabase();
         long result = db.insert("Mascota", null, mascota.toContentValues());
+        db.close();
+        return result;
+    }
+
+    public long Insert(VacunaItem vacuna){
+        db = conn.getWritableDatabase();
+        long result = db.insert("Vacuna", null, vacuna.toContentValues());
         db.close();
         return result;
     }
@@ -39,11 +45,11 @@ public class ConexionSQLite {
 
         String crear_vacuna = "CREATE TABLE  Vacuna (" +
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "Mascota_ID INTEGER, " +
+                "MascotaID INTEGER, " +
                 "Nombre TEXT NOT NULL, " +
                 "Activa INTEGER NOT NULL, " +
                 "Fecha TEXT NOT NULL, " +
-                "FOREIGN KEY (Mascota_ID) REFERENCES Mascota(ID) ON DELETE CASCADE ON UPDATE CASCADE)";
+                "FOREIGN KEY (MascotaID) REFERENCES Mascota(ID) ON DELETE CASCADE ON UPDATE CASCADE)";
 
         public SQLiteHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
             super(context, name, factory, version);

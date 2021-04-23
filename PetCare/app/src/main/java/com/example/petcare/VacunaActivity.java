@@ -67,11 +67,11 @@ public class VacunaActivity extends AppCompatActivity {
 
         //Consultar vacunas de una mascota
         ArrayList<VacunaItem> vacunas = new ArrayList<>();
-        vacunas.add(new VacunaItem(1, "Vacuna 1", true, "12/12/2000"));
-        vacunas.add(new VacunaItem(2, "Vacuna 2", false, "12/12/2000"));
-        vacunas.add(new VacunaItem(3, "Vacuna 3", true, "12/12/2000"));
-        vacunas.add(new VacunaItem(4, "Vacuna 4", false, "12/12/2000"));
-        vacunas.add(new VacunaItem(5, "Vacuna 5", true, "12/12/2000"));
+        vacunas.add(new VacunaItem(1, "Vacuna 1", 1, "12/12/2000"));
+        vacunas.add(new VacunaItem(2, "Vacuna 2", 0, "12/12/2000"));
+        vacunas.add(new VacunaItem(3, "Vacuna 3", 1, "12/12/2000"));
+        vacunas.add(new VacunaItem(4, "Vacuna 4", 0, "12/12/2000"));
+        vacunas.add(new VacunaItem(5, "Vacuna 5", 1, "12/12/2000"));
 
         adapter = new VacunaAdapter(this, vacunas);
         list.setAdapter(adapter);

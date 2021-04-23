@@ -27,7 +27,7 @@ public class VacunaAdapter extends BaseAdapter {
     public VacunaItem getItem(int position) { return items.get(position); }
 
     @Override
-    public long getItemId(int position) { return items.get(position).getIdVacuna(); }
+    public long getItemId(int position) { return items.get(position).getVacunaID(); }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -42,7 +42,7 @@ public class VacunaAdapter extends BaseAdapter {
         TextView txtFecha = (TextView) convertView.findViewById(R.id.TxtItemFechaVac);
 
         txtNombre.setText(item.getNombre());
-        swtActiva.setChecked(item.getActiva());
+        swtActiva.setChecked(item.getActiva()==1);
         txtFecha.setText(item.getFecha());
 
         return convertView;
