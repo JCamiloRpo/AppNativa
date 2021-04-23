@@ -12,5 +12,5 @@ Todas las personas que cuenten con animales domesticos: Perros, Gatos, Caballos,
 Descargar el apk e instalarlo en un dispositivo android
 
 # Contacto
-12camilorpo@gmail.com
-carolina.monsalvev@upb.edu.co
+- 12camilorpo@gmail.com
+- carolina.monsalvev@upb.edu.co
