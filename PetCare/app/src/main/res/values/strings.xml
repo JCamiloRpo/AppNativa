@@ -17,4 +17,9 @@
     <string name="vacunas">Vacunas</string>
     <string name="mascotas">Mascotas</string>
     <string name="perfil">Perfil</string>
+    <string name="agregarpet">AGREGAR MASCOTA</string>
+    <string name="editarpet">EDITAR MASCOTA</string>
+    <string name="nombrepet">NOMBRE MASCOTA</string>
+    <string name="agregarvacu">CREAR VACUNA</string>
+    <string name="editarvacu">EDITAR VACUNA</string>
 </resources>

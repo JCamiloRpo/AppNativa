@@ -11,41 +11,44 @@
         android:theme="@style/Theme.PetCare">
         <activity android:name="com.example.petcare.MascotaActivity" />
         <activity android:name="com.example.petcare.MascotaAddActivity"
+            android:label="@string/agregarpet"
             android:parentActivityName="com.example.petcare.MascotaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petcare.MascotaActivity" />
         </activity>
         <activity android:name="com.example.petcare.MascotaEditActivity"
+            android:label="@string/editarpet"
             android:parentActivityName="com.example.petcare.VacunaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petcare.VacunaActivity" />
         </activity>
         <activity android:name="com.example.petcare.VacunaActivity"
+            android:label="@string/nombrepet"
             android:parentActivityName="com.example.petcare.MascotaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petcare.MascotaActivity" />
         </activity>
         <activity android:name="com.example.petcare.VacunaAddActivity"
+            android:label="@string/agregarvacu"
             android:parentActivityName="com.example.petcare.VacunaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petcare.VacunaActivity" />
         </activity>
         <activity android:name="com.example.petcare.VacunaEditActivity"
+            android:label="@string/editarvacu"
             android:parentActivityName="com.example.petcare.VacunaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petcare.VacunaActivity" />
         </activity>
-        <activity
-            android:name="com.example.petcare.SplashActivity"
+        <activity android:name="com.example.petcare.SplashActivity"
             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

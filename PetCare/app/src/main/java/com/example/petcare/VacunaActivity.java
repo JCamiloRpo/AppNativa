@@ -20,6 +20,7 @@ public class VacunaActivity extends AppCompatActivity {
 
         ActionBar menu = getSupportActionBar();
         menu.setDisplayHomeAsUpEnabled(true);
+        menu.setTitle("NOMBRE MASCOTA");
 
         btnAgregar = (Button) findViewById(R.id.BtnAddVac);
         btnAgregar.setOnClickListener(new View.OnClickListener() {

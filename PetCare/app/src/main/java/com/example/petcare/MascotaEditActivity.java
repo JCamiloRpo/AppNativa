@@ -18,6 +18,7 @@ public class MascotaEditActivity extends AppCompatActivity {
         ActionBar menu = getSupportActionBar();
         menu.setDisplayHomeAsUpEnabled(true);
 
+
         btnGuardar = (Button) findViewById(R.id.BtnEditPet);
         btnGuardar.setOnClickListener(new View.OnClickListener() {
             @Override
