@@ -24,4 +24,5 @@
     <string name="editarvacu">EDITAR VACUNA</string>
     <string name="item_mascota">Item mascota</string>
     <string name="ultima_vacuna">Ultima vacuna</string>
+    <string name="info">Acerca de</string>
 </resources>
