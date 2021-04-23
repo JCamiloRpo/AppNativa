@@ -38,8 +38,8 @@ public class MascotaActivity extends AppCompatActivity {
 
         //Consultar mascotas
         ArrayList<MascotaItem> mascotas = new ArrayList<>();
-        mascotas.add(new MascotaItem(2,R.drawable.gato, "Gato", "1", "12/12/2000"));
-        mascotas.add(new MascotaItem(1,R.drawable.perro, "Perro", "1", "12/12/2000"));
+        mascotas.add(new MascotaItem(1,R.drawable.gato, "Gato", "1", "12/12/2000"));
+        mascotas.add(new MascotaItem(2,R.drawable.perro, "Perro", "1", "12/12/2000"));
         mascotas.add(new MascotaItem(3,R.drawable.hamster, "Hamster", "1", "12/12/2000"));
         mascotas.add(new MascotaItem(4,R.drawable.conejo, "Conejo", "1", "12/12/2000"));
         mascotas.add(new MascotaItem(5,R.drawable.pollo, "Pollo", "1", "12/12/2000"));

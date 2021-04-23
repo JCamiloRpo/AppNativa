@@ -25,7 +25,7 @@
             android:inputType="textPersonName" />
 
         <Switch
-            android:id="@+id/swtActiva"
+            android:id="@+id/SwtActiva"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
