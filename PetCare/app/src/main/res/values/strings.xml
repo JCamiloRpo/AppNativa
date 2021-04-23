@@ -22,4 +22,6 @@
     <string name="nombrepet">NOMBRE MASCOTA</string>
     <string name="agregarvacu">CREAR VACUNA</string>
     <string name="editarvacu">EDITAR VACUNA</string>
+    <string name="item_mascota">Item mascota</string>
+    <string name="ultima_vacuna">Ultima vacuna</string>
 </resources>
