@@ -2,7 +2,6 @@ package com.example.petcare;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +28,6 @@ public class MascotaEditActivity extends AppCompatActivity {
                 onBackPressed();
             }
         });
-
         btnRemove = (Button) findViewById(R.id.BtnRemovePet);
         btnRemove.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -79,7 +79,8 @@
             android:padding="15dp"
             android:text="@string/guardar"
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:cornerRadius="10dp" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

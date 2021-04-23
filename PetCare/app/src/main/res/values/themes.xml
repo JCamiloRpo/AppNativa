@@ -1,6 +1,6 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.PetCare" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="Theme.PetCare" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/red_dark</item>
         <item name="colorPrimaryVariant">@color/red_dark</item>
