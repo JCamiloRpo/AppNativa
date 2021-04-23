@@ -52,6 +52,7 @@
                 android:layout_marginBottom="5dp"
                 android:text="@string/ultima_vacuna"
                 android:textColor="@color/black" />
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

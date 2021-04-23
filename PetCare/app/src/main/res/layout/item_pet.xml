@@ -27,12 +27,12 @@
 
 
             <ImageView
-                android:id="@+id/ImgPetItem"
+                android:id="@+id/ImgItemPet"
                 android:layout_width="180dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:cardCornerRadius="10dp"
+                app:cornerRadius="10dp"
                 android:contentDescription="@string/item_mascota"
                 android:foregroundGravity="center"
                 android:src="@drawable/mascota" />
