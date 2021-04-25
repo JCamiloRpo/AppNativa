@@ -18,8 +18,9 @@ import com.example.petcare.entities.MascotaItem;
 import com.example.petcare.R;
 
 public class MascotaAddActivity extends AppCompatActivity {
-    public static final int PICK_IMG = 10;
+    //public static final int PICK_IMG = 10;
     public static String img = "";
+    public static boolean add = false;
     Button btnGuardar;
     EditText txtNombre, txtTipo, txtEdad;
     ImageView imgPet;
@@ -66,6 +67,7 @@ public class MascotaAddActivity extends AppCompatActivity {
     }
 
     private void showAvatars(){
+        add = true;
         AvatarDialog dialogAvatar = new AvatarDialog();
         dialogAvatar.show(getSupportFragmentManager(), "Seleccionar avatar");
     }

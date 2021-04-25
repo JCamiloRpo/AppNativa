@@ -39,6 +39,20 @@ public class ConexionSQLite {
     }
 
     /**
+     * Metodos utilizados para actualizar la BD
+     * Reciben la llave primaria de la tabla en cuestion
+     * y un objeto con los parametros que se desean cambiar.
+     * @return el resultado de la operacion en la BD
+     */
+    public int Update(MascotaItem item,long MascotaID){
+        db = conn.getWritableDatabase();
+        db.setForeignKeyConstraintsEnabled(true);
+        int resul = db.update(TABLE_MASCOTA,item.toContentValues(),"ID = ?",new String[]{String.valueOf(MascotaID)});
+        db.close();
+        return resul;
+    }
+
+    /**
      * Metodo para leer infromacion de la BD.
      * @param table a consultar
      * @return un arreglo con la representacion de la tabla

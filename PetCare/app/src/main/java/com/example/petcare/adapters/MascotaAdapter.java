@@ -2,6 +2,7 @@ package com.example.petcare.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.petcare.activities.VacunaActivity;
 import com.example.petcare.entities.MascotaItem;
 import com.example.petcare.R;
 
@@ -41,16 +43,26 @@ public class MascotaAdapter extends BaseAdapter {
             LayoutInflater inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.item_pet, null);
         }
-        ImageView imgPet = (ImageView) convertView.findViewById(R.id.ImgItemPet);
-        TextView txtNombre = (TextView) convertView.findViewById(R.id.TxtItemNombrePet);
-        TextView txtEdad = (TextView) convertView.findViewById(R.id.TxtItemEdadPet);
-        TextView txtVacuna = (TextView) convertView.findViewById(R.id.TxtItemVacunaPet);
+        ImageView imgPet = convertView.findViewById(R.id.ImgItemPet);
+        TextView txtNombre = convertView.findViewById(R.id.TxtItemNombrePet);
+        TextView txtEdad = convertView.findViewById(R.id.TxtItemEdadPet);
+        TextView txtVacuna = convertView.findViewById(R.id.TxtItemVacunaPet);
 
         imgPet.setImageURI(Uri.parse("android.resource://com.example.petcare/drawable/"+item.getImagen()));
         txtNombre.setText(item.getNombre());
         txtEdad.setText(""+item.getEdad());
         txtVacuna.setText(item.getVacuna());
 
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                VacunaActivity.id = item.getMascotaID();
+                VacunaActivity.mascota = item.getNombre();
+
+                Intent i = new Intent(activity, VacunaActivity.class);
+                activity.startActivity(i);
+            }
+        });
         return convertView;
     }
 }

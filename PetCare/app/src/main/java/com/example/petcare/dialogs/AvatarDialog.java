@@ -17,6 +17,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.petcare.R;
 import com.example.petcare.activities.MascotaAddActivity;
+import com.example.petcare.activities.MascotaEditActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,8 +42,6 @@ public class AvatarDialog extends DialogFragment implements View.OnClickListener
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View v = inflater.inflate(R.layout.dialog_avatars,null);
         builder.setView(v);
-        //builder.setCancelable(false);
-        //dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         btnCerrar = v.findViewById(R.id.BtnVtnCerrar);
         btnCerrar.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +51,6 @@ public class AvatarDialog extends DialogFragment implements View.OnClickListener
             }
         });
 
-        imgPet = actividad.findViewById(R.id.ImgPet);
         v.findViewById(R.id.ImgOpcion1).setOnClickListener(this);
         v.findViewById(R.id.ImgOpcion2).setOnClickListener(this);
         v.findViewById(R.id.ImgOpcion3).setOnClickListener(this);
@@ -82,8 +80,16 @@ public class AvatarDialog extends DialogFragment implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
-        MascotaAddActivity.img = view.getContentDescription().toString().toLowerCase();
-        imgPet.setImageURI(Uri.parse("android.resource://com.example.petcare/drawable/"+ MascotaAddActivity.img));
+        if(MascotaAddActivity.add){
+            MascotaAddActivity.img = view.getContentDescription().toString().toLowerCase();
+            imgPet = actividad.findViewById(R.id.ImgPet);
+            imgPet.setImageURI(Uri.parse("android.resource://com.example.petcare/drawable/"+ MascotaAddActivity.img));
+        }
+        else {
+            MascotaEditActivity.img = view.getContentDescription().toString().toLowerCase();
+            imgPet = actividad.findViewById(R.id.ImgPetEdit);
+            imgPet.setImageURI(Uri.parse("android.resource://com.example.petcare/drawable/"+ MascotaEditActivity.img));
+        }
         dismiss();
     }
 }
