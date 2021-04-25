@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MascotaAddActivity">
+    tools:context=".activities.MascotaAddActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,21 +20,21 @@
             android:layout_height="150dp"
             android:layout_margin="20dp"
             android:contentDescription="@string/imagen_mascota"
-            android:src="@drawable/logo" />
+            android:src="@drawable/mascota" />
 
         <TextView
             android:id="@+id/TxtImg"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             android:gravity="center"
-            android:singleLine="false"
+
             android:text="@string/editar_imagen"
             android:textAllCaps="false"
             android:textColor="#000000" />
 
         <EditText
-            android:id="@+id/TextNombre"
+            android:id="@+id/TxtNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -46,7 +46,7 @@
             android:autofillHints="" />
 
         <EditText
-            android:id="@+id/TextTipo"
+            android:id="@+id/TxtTipo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
@@ -55,7 +55,8 @@
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/tipo_de_mascota"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textAllCaps="true" />
 
         <EditText
             android:id="@+id/TxtEdad"

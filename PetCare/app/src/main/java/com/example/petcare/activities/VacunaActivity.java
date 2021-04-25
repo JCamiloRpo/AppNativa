@@ -1,4 +1,4 @@
-package com.example.petcare;
+package com.example.petcare.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,11 +11,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.petcare.R;
+import com.example.petcare.adapters.VacunaAdapter;
+import com.example.petcare.entities.VacunaItem;
+
 import java.util.ArrayList;
 
 public class VacunaActivity extends AppCompatActivity {
     Button btnAgregar;
     VacunaAdapter adapter;
+    public static String mascota;
+    public static long id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +56,7 @@ public class VacunaActivity extends AppCompatActivity {
     private void initButtons(){
         ActionBar menu = getSupportActionBar();
         menu.setDisplayHomeAsUpEnabled(true);
-        menu.setTitle("NOMBRE MASCOTA");
+        menu.setTitle(mascota);
 
         btnAgregar = (Button) findViewById(R.id.BtnAddVac);
         btnAgregar.setOnClickListener(new View.OnClickListener() {

@@ -1,8 +1,12 @@
-package com.example.petcare;
+package com.example.petcare.activities;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.petcare.R;
+import com.example.petcare.activities.MascotaActivity;
+
 import java.util.Timer;
 import java.util.TimerTask;
 

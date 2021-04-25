@@ -1,13 +1,18 @@
-package com.example.petcare;
+package com.example.petcare.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.petcare.entities.MascotaItem;
+import com.example.petcare.R;
+
 import java.util.ArrayList;
 
 public class MascotaAdapter extends BaseAdapter {
@@ -41,9 +46,9 @@ public class MascotaAdapter extends BaseAdapter {
         TextView txtEdad = (TextView) convertView.findViewById(R.id.TxtItemEdadPet);
         TextView txtVacuna = (TextView) convertView.findViewById(R.id.TxtItemVacunaPet);
 
-        imgPet.setImageResource(item.getImagen());
+        imgPet.setImageURI(Uri.parse("android.resource://com.example.petcare/drawable/"+item.getImagen()));
         txtNombre.setText(item.getNombre());
-        txtEdad.setText(item.getEdad());
+        txtEdad.setText(""+item.getEdad());
         txtVacuna.setText(item.getVacuna());
 
         return convertView;

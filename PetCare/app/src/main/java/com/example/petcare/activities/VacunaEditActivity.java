@@ -1,4 +1,4 @@
-package com.example.petcare;
+package com.example.petcare.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.petcare.R;
 
 public class VacunaEditActivity extends AppCompatActivity {
     Button btnEdit, btnRemove;

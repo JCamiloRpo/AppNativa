@@ -1,4 +1,4 @@
-package com.example.petcare;
+package com.example.petcare.adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Switch;
 import android.widget.TextView;
+
+import com.example.petcare.R;
+import com.example.petcare.entities.VacunaItem;
 
 import java.util.ArrayList;
 

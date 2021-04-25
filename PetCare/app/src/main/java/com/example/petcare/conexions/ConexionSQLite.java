@@ -1,10 +1,17 @@
-package com.example.petcare;
+package com.example.petcare.conexions;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.example.petcare.entities.MascotaItem;
+import com.example.petcare.entities.VacunaItem;
+
 public class ConexionSQLite {
+    public static final String TABLE_MASCOTA = "Mascota";
+    public static final String TABLE_VACUNA = "Vacuna";
+
     private SQLiteHelper conn; //conexion a BD.
     private SQLiteDatabase db;
 
@@ -31,19 +38,69 @@ public class ConexionSQLite {
         return result;
     }
 
+    /**
+     * Metodo para leer infromacion de la BD.
+     * @param table a consultar
+     * @return un arreglo con la representacion de la tabla
+     */
+    public String[][] Read(String table){
+        String[][] result;
+        SQLiteDatabase db = conn.getReadableDatabase();
+        String query = "SELECT * FROM "+table;
+        Cursor c= db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            result = new String[c.getCount()][c.getColumnCount()];
+            int i=0;
+            do {
+                for(int j=0; j<c.getColumnCount(); j++)
+                    result[i][j] = c.getString(j);
+                i++;
+            } while (c.moveToNext());
+        }
+        else
+            result=new String[0][0];
+        db.close();
+        return result;
+    }
+
+    /**
+     * Metodo para leer infromacion de la BD.
+     * Reciben la tabla, las columnas y la condicion a buscar
+     * @return un arreglo con la misma estructura de una tabla
+     */
+    public String[][] Read(String table, String columns, String where){
+        String[][] result;
+        SQLiteDatabase db = conn.getReadableDatabase();
+        String query = "SELECT "+columns+" FROM "+table+" WHERE "+where;
+        Cursor c= db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            result = new String[c.getCount()][c.getColumnCount()];
+            int i=0;
+            do {
+                for(int j=0; j<c.getColumnCount(); j++)
+                    result[i][j] = c.getString(j);
+                i++;
+            } while (c.moveToNext());
+        }
+        else
+            result=new String[0][0];
+        db.close();
+        return result;
+    }
+
     private class SQLiteHelper extends SQLiteOpenHelper {
 
         /* Como no existen el tipo de dato boolean, se utilizará el Integer donde 0 es false y 1 es true
         Como tampoco existe el tipo de dato Datetime, se utilizará el TEXT con el formato DD/MM/AAAA
          */
-        String crear_mascota = "CREATE TABLE  Mascota (" +
+        String crear_mascota = "CREATE TABLE "+TABLE_MASCOTA+" (" +
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "Imagen INTEGER NOT NULL, " +
+                "Imagen TEXT NOT NULL, " +
                 "Nombre TEXT NOT NULL, " +
                 "Tipo TEXT NOT NULL, " +
                 "Edad INTEGER NOT NULL)";
 
-        String crear_vacuna = "CREATE TABLE  Vacuna (" +
+        String crear_vacuna = "CREATE TABLE  "+TABLE_VACUNA+" (" +
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "MascotaID INTEGER, " +
                 "Nombre TEXT NOT NULL, " +

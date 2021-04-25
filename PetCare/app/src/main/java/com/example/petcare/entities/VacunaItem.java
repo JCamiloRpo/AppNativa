@@ -1,4 +1,4 @@
-package com.example.petcare;
+package com.example.petcare.entities;
 
 import android.content.ContentValues;
 

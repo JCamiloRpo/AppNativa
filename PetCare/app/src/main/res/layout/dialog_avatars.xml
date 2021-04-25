@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    tools:context=".dialogs.AvatarDialog">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/blue_dark">
+
+        <TextView
+            android:id="@+id/TxtVtnAvatar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/avatar"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <ImageButton
+            android:id="@+id/BtnVtnCerrar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/cerrar"
+            android:src="@drawable/ic_cerrar_black_foreground" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ImgOpcion1"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/buho"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/buho" />
+
+                <ImageView
+                    android:id="@+id/ImgOpcion2"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/caballo"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/caballo" />
+
+                <ImageView
+                    android:id="@+id/ImgOpcion3"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/cerdo"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/cerdo" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ImgOpcion4"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/conejo"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/conejo" />
+
+                <ImageView
+                    android:id="@+id/ImgOpcion5"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/gallina"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/gallina" />
+
+                <ImageView
+                    android:id="@+id/ImgOpcion6"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/gato"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/gato" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ImgOpcion7"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/hamster"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/hamster" />
+
+                <ImageView
+                    android:id="@+id/ImgOpcion8"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/lobo"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/lobo" />
+
+                <ImageView
+                    android:id="@+id/ImgOpcion9"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/oso"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/oso" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ImgOpcion10"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/panda"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/panda" />
+
+                <ImageView
+                    android:id="@+id/ImgOpcion11"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/perro"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/perro" />
+
+                <ImageView
+                    android:id="@+id/ImgOpcion12"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/pollo"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/pollo" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ImgOpcion13"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/raton"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/raton" />
+
+                <ImageView
+                    android:id="@+id/ImgOpcion14"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/vaca"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/vaca" />
+
+                <ImageView
+                    android:id="@+id/ImgOpcion15"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="5dp"
+                    android:contentDescription="@string/zorro"
+                    android:padding="10dp"
+                    app:srcCompat="@drawable/zorro" />
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

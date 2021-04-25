@@ -6,7 +6,7 @@
     <string name="imagen_mascota">Imagen mascota</string>
     <string name="editar_imagen">Editar imagen</string>
     <string name="nombre_mascota">Nombre mascota</string>
-    <string name="tipo_de_mascota">Tipo de mascota</string>
+    <string name="tipo_de_mascota">Tipo de mascota (Perro, Gato, etc)</string>
     <string name="edad">Edad</string>
     <string name="vacuna">Vacuna</string>
     <string name="activa">Activa</string>
@@ -25,4 +25,24 @@
     <string name="item_mascota">Item mascota</string>
     <string name="ultima_vacuna">Ultima vacuna</string>
     <string name="info">Acerca de</string>
+    <string name="avatar">Selecciona un avatar</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="buho">Buho</string>
+    <string name="caballo">Caballo</string>
+    <string name="cerdo">Cerdo</string>
+    <string name="conejo">Conejo</string>
+    <string name="gallina">Gallina</string>
+    <string name="gato">Gato</string>
+    <string name="hamster">Hamster</string>
+    <string name="jirafa">Jirafa</string>
+    <string name="lobo">Lobo</string>
+    <string name="oso">Oso</string>
+    <string name="panda">Panda</string>
+    <string name="perro">Perro</string>
+    <string name="pollo">Pollo</string>
+    <string name="raton">Raton</string>
+    <string name="vaca">Vaca</string>
+    <string name="zorro">Zorro</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

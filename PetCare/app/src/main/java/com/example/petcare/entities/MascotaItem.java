@@ -1,13 +1,14 @@
-package com.example.petcare;
+package com.example.petcare.entities;
 
 import android.content.ContentValues;
+import android.net.Uri;
 
 public class MascotaItem {
 
-    private int MascotaID, imagen, edad;
-    private String nombre, tipo, vacuna;
+    private int MascotaID, edad;
+    private String imagen, nombre, tipo, vacuna;
 
-    public MascotaItem(int MascotaID, int imagen, String nombre, int edad, String vacuna) {
+    public MascotaItem(int MascotaID, String imagen, String nombre, int edad, String vacuna) {
         this.MascotaID = MascotaID;
         this.imagen = imagen;
         this.nombre = nombre;
@@ -15,18 +16,16 @@ public class MascotaItem {
         this.vacuna = vacuna;
     }
 
-    public MascotaItem(int MascotaID, int imagen, String nombre, String tipo, int edad, String vacuna) {
-        this.MascotaID = MascotaID;
+    public MascotaItem(String imagen, String nombre, String tipo, int edad) {
         this.imagen = imagen;
         this.nombre = nombre;
         this.tipo = tipo;
         this.edad = edad;
-        this.vacuna = vacuna;
     }
 
     public int getMascotaID() { return MascotaID; }
 
-    public int getImagen() { return imagen; }
+    public String getImagen() { return imagen; }
 
     public String getNombre() { return nombre; }
 
@@ -43,7 +42,6 @@ public class MascotaItem {
      */
     public ContentValues toContentValues() {
         ContentValues values = new ContentValues();
-        values.put("ID", MascotaID);
         values.put("Imagen", imagen);
         values.put("Nombre", nombre);
         values.put("Tipo", tipo);
