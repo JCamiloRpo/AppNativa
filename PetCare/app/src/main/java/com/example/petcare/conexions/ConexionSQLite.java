@@ -53,6 +53,19 @@ public class ConexionSQLite {
     }
 
     /**
+     * Metodos utilizados para eliminar registros en la BD
+     * Reciben la llave primaria de la tabla en cuestion
+     * @return el resultado de la operacion en la BD
+     */
+    public int Delete(long MascotaID){
+        db = conn.getWritableDatabase();
+        db.setForeignKeyConstraintsEnabled(true);
+        int resul = db.delete(TABLE_MASCOTA, "ID = ?", new String[]{String.valueOf(MascotaID)});
+        db.close();
+        return resul;
+    }
+
+    /**
      * Metodo para leer infromacion de la BD.
      * @param table a consultar
      * @return un arreglo con la representacion de la tabla

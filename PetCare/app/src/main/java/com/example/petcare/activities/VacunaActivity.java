@@ -20,6 +20,7 @@ import java.util.ArrayList;
 public class VacunaActivity extends AppCompatActivity {
     Button btnAgregar;
     VacunaAdapter adapter;
+    ActionBar menu;
     public static String mascota;
     public static long id;
 
@@ -30,6 +31,12 @@ public class VacunaActivity extends AppCompatActivity {
 
         initButtons();
         initList();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        menu.setTitle(mascota);
     }
 
     @Override
@@ -54,7 +61,7 @@ public class VacunaActivity extends AppCompatActivity {
     }
 
     private void initButtons(){
-        ActionBar menu = getSupportActionBar();
+        menu = getSupportActionBar();
         menu.setDisplayHomeAsUpEnabled(true);
         menu.setTitle(mascota);
 

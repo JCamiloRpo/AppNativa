@@ -65,9 +65,7 @@ public class MascotaEditActivity extends AppCompatActivity {
         btnRemove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), MascotaActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                startActivity(i);
-                finish();
+                deletePet();
             }
         });
 
@@ -85,15 +83,15 @@ public class MascotaEditActivity extends AppCompatActivity {
         txtNombre.setText(pet[0][2]);
         txtTipo.setText(pet[0][3]);
         txtEdad.setText(pet[0][4]);
+
+        img = pet[0][1];
     }
 
     private void savePet() {
         String nombre = txtNombre.getText().toString(),
                 tipo = txtTipo.getText().toString(),
                 edad = txtEdad.getText().toString();
-        if(img.equals(""))
-            Toast.makeText(getApplicationContext(), "Debe selecionar una imagen.", Toast.LENGTH_SHORT).show();
-        else if(nombre.equals(""))
+        if(nombre.equals(""))
             Toast.makeText(getApplicationContext(), "Debe ingresar el nombre de la mascota.", Toast.LENGTH_SHORT).show();
         else if(tipo.equals(""))
             Toast.makeText(getApplicationContext(), "Debe ingresar el tipo de la mascota.", Toast.LENGTH_SHORT).show();
@@ -109,4 +107,11 @@ public class MascotaEditActivity extends AppCompatActivity {
         }
     }
 
+    private void deletePet(){
+        MascotaActivity.sql.Delete(VacunaActivity.id);
+        MascotaActivity.cargarList();
+        Intent i = new Intent(getApplicationContext(), MascotaActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(i);
+        finish();
+    }
 }

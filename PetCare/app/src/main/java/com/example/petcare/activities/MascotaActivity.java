@@ -87,7 +87,7 @@ public class MascotaActivity extends AppCompatActivity {
                 vacuna = new String[1][1];
                 vacuna[0][0] = "Sin vacunas";
             }
-            mascotas.add(new MascotaItem(Integer.parseInt(datos[i][0]), datos[i][1], datos[i][2], Integer.parseInt(datos[i][0]), vacuna[0][0]));
+            mascotas.add(new MascotaItem(Integer.parseInt(datos[i][0]), datos[i][1], datos[i][2], Integer.parseInt(datos[i][4]), vacuna[0][0]));
         }
         return mascotas;
     }
