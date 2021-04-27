@@ -38,7 +38,6 @@ public class VacunaItem {
      */
     public ContentValues toContentValues() {
         ContentValues values = new ContentValues();
-        values.put("ID", VacunaID);
         values.put("MascotaID", MascotaID);
         values.put("Nombre", nombre);
         values.put("Activa", activa);

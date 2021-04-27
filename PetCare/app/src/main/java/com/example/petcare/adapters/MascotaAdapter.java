@@ -51,7 +51,8 @@ public class MascotaAdapter extends BaseAdapter {
         imgPet.setImageURI(Uri.parse("android.resource://com.example.petcare/drawable/"+item.getImagen()));
         txtNombre.setText(item.getNombre());
         txtEdad.setText(item.getEdad()+" años");
-        txtVacuna.setText(item.getVacuna());
+        if(item.getVacuna().equals("Sin vacunas")) txtVacuna.setText(item.getVacuna());
+        else txtVacuna.setText("Ultima vacuna: " + item.getVacuna());
 
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
