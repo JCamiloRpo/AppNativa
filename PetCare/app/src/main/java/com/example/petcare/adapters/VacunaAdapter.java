@@ -2,6 +2,7 @@ package com.example.petcare.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +11,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.petcare.R;
+import com.example.petcare.activities.VacunaEditActivity;
 import com.example.petcare.entities.VacunaItem;
 
 import java.util.ArrayList;
@@ -47,6 +49,16 @@ public class VacunaAdapter extends BaseAdapter {
         txtNombre.setText(item.getNombre());
         swtActiva.setChecked(item.getActiva()==1);
         txtFecha.setText(item.getFecha());
+
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                VacunaEditActivity.idVacuna = item.getVacunaID();
+
+                Intent i = new Intent(activity, VacunaEditActivity.class);
+                activity.startActivity(i);
+            }
+        });
 
         return convertView;
     }

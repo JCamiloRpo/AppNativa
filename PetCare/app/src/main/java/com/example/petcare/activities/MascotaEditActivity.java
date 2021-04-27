@@ -14,7 +14,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.petcare.R;
-import com.example.petcare.activities.MascotaActivity;
 import com.example.petcare.conexions.ConexionSQLite;
 import com.example.petcare.dialogs.AvatarDialog;
 import com.example.petcare.entities.MascotaItem;
@@ -78,7 +77,7 @@ public class MascotaEditActivity extends AppCompatActivity {
     }
 
     private void consultar(){
-        String[][] pet = MascotaActivity.sql.Read(ConexionSQLite.TABLE_MASCOTA, "*", "ID="+VacunaActivity.id);
+        String[][] pet = MascotaActivity.sql.Read(ConexionSQLite.TABLE_MASCOTA, "*", "ID="+VacunaActivity.idMascota);
         imgPet.setImageURI(Uri.parse("android.resource://com.example.petcare/drawable/"+pet[0][1]));
         txtNombre.setText(pet[0][2]);
         txtTipo.setText(pet[0][3]);
@@ -99,7 +98,7 @@ public class MascotaEditActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Debe ingresar la edad de la mascota.", Toast.LENGTH_SHORT).show();
         else{
             //Guardar la información
-            MascotaActivity.sql.Update(new MascotaItem(img, nombre, tipo.toUpperCase(), Integer.parseInt(edad)), VacunaActivity.id);
+            MascotaActivity.sql.Update(new MascotaItem(img, nombre, tipo.toUpperCase(), Integer.parseInt(edad)), VacunaActivity.idMascota);
 
             MascotaActivity.cargarList();
             VacunaActivity.mascota = nombre;
@@ -108,7 +107,7 @@ public class MascotaEditActivity extends AppCompatActivity {
     }
 
     private void deletePet(){
-        MascotaActivity.sql.Delete(VacunaActivity.id);
+        MascotaActivity.sql.Delete(VacunaActivity.idMascota);
         MascotaActivity.cargarList();
         Intent i = new Intent(getApplicationContext(), MascotaActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(i);

@@ -15,14 +15,13 @@ import android.widget.ListView;
 import com.example.petcare.R;
 import com.example.petcare.adapters.VacunaAdapter;
 import com.example.petcare.conexions.ConexionSQLite;
-import com.example.petcare.entities.MascotaItem;
 import com.example.petcare.entities.VacunaItem;
 
 import java.util.ArrayList;
 
 public class VacunaActivity extends AppCompatActivity {
     public static String mascota;
-    public static long id;
+    public static long idMascota;
     Button btnAgregar;
     ActionBar menu;
     static Activity act;
@@ -93,7 +92,7 @@ public class VacunaActivity extends AppCompatActivity {
 
     private static ArrayList<VacunaItem> consultaDatos(){
         ArrayList<VacunaItem> vacunas = new ArrayList<>();
-        String [][] datos = MascotaActivity.sql.Read(ConexionSQLite.TABLE_VACUNA, "MascotaID="+id);
+        String [][] datos = MascotaActivity.sql.Read(ConexionSQLite.TABLE_VACUNA, "MascotaID="+ idMascota);
         for (int i=0; i<datos.length;i++){
             vacunas.add(new VacunaItem(Integer.parseInt(datos[i][0]), datos[i][2], Integer.parseInt(datos[i][3]), datos[i][4]));
         }

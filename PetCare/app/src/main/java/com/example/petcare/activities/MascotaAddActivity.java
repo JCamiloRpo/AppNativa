@@ -89,7 +89,7 @@ public class MascotaAddActivity extends AppCompatActivity {
             long id = MascotaActivity.sql.Insert(new MascotaItem(img, nombre, tipo.toUpperCase(), Integer.parseInt(edad)));
 
             MascotaActivity.cargarList();
-            VacunaActivity.id = id;
+            VacunaActivity.idMascota = id;
             VacunaActivity.mascota = nombre;
             Intent i = new Intent(getApplicationContext(), VacunaActivity.class);
             startActivity(i);

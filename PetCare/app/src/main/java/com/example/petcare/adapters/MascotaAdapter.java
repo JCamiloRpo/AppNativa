@@ -57,7 +57,7 @@ public class MascotaAdapter extends BaseAdapter {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                VacunaActivity.id = item.getMascotaID();
+                VacunaActivity.idMascota = item.getMascotaID();
                 VacunaActivity.mascota = item.getNombre();
 
                 Intent i = new Intent(activity, VacunaActivity.class);

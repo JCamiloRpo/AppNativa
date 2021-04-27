@@ -52,6 +52,14 @@ public class ConexionSQLite {
         return resul;
     }
 
+    public int Update(VacunaItem item,long VacunaID){
+        db = conn.getWritableDatabase();
+        db.setForeignKeyConstraintsEnabled(true);
+        int resul = db.update(TABLE_VACUNA,item.toContentValues(),"ID = ?",new String[]{String.valueOf(VacunaID)});
+        db.close();
+        return resul;
+    }
+
     /**
      * Metodos utilizados para eliminar registros en la BD
      * Reciben la llave primaria de la tabla en cuestion

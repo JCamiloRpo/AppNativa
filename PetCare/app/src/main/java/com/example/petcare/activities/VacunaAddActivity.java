@@ -4,7 +4,6 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +13,6 @@ import android.widget.Switch;
 import android.widget.Toast;
 
 import com.example.petcare.R;
-import com.example.petcare.entities.MascotaItem;
 import com.example.petcare.entities.VacunaItem;
 
 import java.util.Calendar;
@@ -71,7 +69,7 @@ public class VacunaAddActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Debe ingresar la fecha de la vacuna.", Toast.LENGTH_SHORT).show();
         else{
             //Guardar la información
-            MascotaActivity.sql.Insert(new VacunaItem(0, (int)VacunaActivity.id, nombre, activa, fecha));
+            MascotaActivity.sql.Insert(new VacunaItem(0, (int)VacunaActivity.idMascota, nombre, activa, fecha));
 
             VacunaActivity.cargarList();
             MascotaActivity.cargarList();
