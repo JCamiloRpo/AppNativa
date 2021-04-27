@@ -44,7 +44,7 @@ public class ConexionSQLite {
      * y un objeto con los parametros que se desean cambiar.
      * @return el resultado de la operacion en la BD
      */
-    public int Update(MascotaItem item,long MascotaID){
+    public int Update(MascotaItem item, long MascotaID){
         db = conn.getWritableDatabase();
         db.setForeignKeyConstraintsEnabled(true);
         int resul = db.update(TABLE_MASCOTA,item.toContentValues(),"ID = ?",new String[]{String.valueOf(MascotaID)});
@@ -52,7 +52,7 @@ public class ConexionSQLite {
         return resul;
     }
 
-    public int Update(VacunaItem item,long VacunaID){
+    public int Update(VacunaItem item, long VacunaID){
         db = conn.getWritableDatabase();
         db.setForeignKeyConstraintsEnabled(true);
         int resul = db.update(TABLE_VACUNA,item.toContentValues(),"ID = ?",new String[]{String.valueOf(VacunaID)});
@@ -61,14 +61,14 @@ public class ConexionSQLite {
     }
 
     /**
-     * Metodos utilizados para eliminar registros en la BD
+     * Metodo utilizado para eliminar registros en la BD
      * Reciben la llave primaria de la tabla en cuestion
      * @return el resultado de la operacion en la BD
      */
-    public int Delete(long MascotaID){
+    public int Delete(String table, long id){
         db = conn.getWritableDatabase();
         db.setForeignKeyConstraintsEnabled(true);
-        int resul = db.delete(TABLE_MASCOTA, "ID = ?", new String[]{String.valueOf(MascotaID)});
+        int resul = db.delete(table, "ID = ?", new String[]{String.valueOf(id)});
         db.close();
         return resul;
     }

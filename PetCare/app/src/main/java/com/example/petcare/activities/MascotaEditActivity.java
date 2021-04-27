@@ -107,7 +107,7 @@ public class MascotaEditActivity extends AppCompatActivity {
     }
 
     private void deletePet(){
-        MascotaActivity.sql.Delete(VacunaActivity.idMascota);
+        MascotaActivity.sql.Delete(ConexionSQLite.TABLE_MASCOTA, VacunaActivity.idMascota);
         MascotaActivity.cargarList();
         Intent i = new Intent(getApplicationContext(), MascotaActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivity(i);

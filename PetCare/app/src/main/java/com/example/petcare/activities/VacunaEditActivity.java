@@ -66,7 +66,7 @@ public class VacunaEditActivity extends AppCompatActivity {
         btnRemove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                deleteVacuna();
             }
         });
 
@@ -95,6 +95,14 @@ public class VacunaEditActivity extends AppCompatActivity {
             MascotaActivity.cargarList();
             onBackPressed();
         }
+    }
+
+    private void deleteVacuna(){
+        MascotaActivity.sql.Delete(ConexionSQLite.TABLE_VACUNA, idVacuna);
+
+        VacunaActivity.cargarList();
+        MascotaActivity.cargarList();
+        onBackPressed();
     }
 
 }
