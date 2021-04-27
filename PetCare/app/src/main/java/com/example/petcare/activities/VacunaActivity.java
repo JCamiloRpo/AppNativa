@@ -3,6 +3,7 @@ package com.example.petcare.activities;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,24 +14,27 @@ import android.widget.ListView;
 
 import com.example.petcare.R;
 import com.example.petcare.adapters.VacunaAdapter;
+import com.example.petcare.conexions.ConexionSQLite;
+import com.example.petcare.entities.MascotaItem;
 import com.example.petcare.entities.VacunaItem;
 
 import java.util.ArrayList;
 
 public class VacunaActivity extends AppCompatActivity {
-    Button btnAgregar;
-    VacunaAdapter adapter;
-    ActionBar menu;
     public static String mascota;
     public static long id;
+    Button btnAgregar;
+    ActionBar menu;
+    static Activity act;
+    static VacunaAdapter adapter;
+    static ListView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vacuna);
 
-        initButtons();
-        initList();
+        initComponents();
     }
 
     @Override
@@ -60,12 +64,13 @@ public class VacunaActivity extends AppCompatActivity {
         }
     }
 
-    private void initButtons(){
+    private void initComponents(){
+        act = this;
         menu = getSupportActionBar();
         menu.setDisplayHomeAsUpEnabled(true);
         menu.setTitle(mascota);
 
-        btnAgregar = (Button) findViewById(R.id.BtnAddVac);
+        btnAgregar = findViewById(R.id.BtnAddVac);
         btnAgregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,20 +78,35 @@ public class VacunaActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        list = findViewById(R.id.ListVacunas);
+        cargarList();
     }
 
-    private void initList(){
-        ListView list = (ListView) findViewById(R.id.ListVacunas);
-
+    public static void cargarList(){
         //Consultar vacunas de una mascota
+        ArrayList<VacunaItem> vacunas = consultaDatos();
+
+        adapter = new VacunaAdapter(act, vacunas);
+        list.setAdapter(adapter);
+    }
+
+    private static ArrayList<VacunaItem> consultaDatos(){
+        ArrayList<VacunaItem> vacunas = new ArrayList<>();
+        String [][] datos = MascotaActivity.sql.Read(ConexionSQLite.TABLE_VACUNA, "MascotaID="+id);
+        for (int i=0; i<datos.length;i++){
+            vacunas.add(new VacunaItem(Integer.parseInt(datos[i][0]), datos[i][2], Integer.parseInt(datos[i][3]), datos[i][4]));
+        }
+        return vacunas;
+    }
+
+    private  ArrayList<VacunaItem> pruebaDatos(){
         ArrayList<VacunaItem> vacunas = new ArrayList<>();
         vacunas.add(new VacunaItem(1, "Vacuna 1", 1, "12/12/2000"));
         vacunas.add(new VacunaItem(2, "Vacuna 2", 0, "12/12/2000"));
         vacunas.add(new VacunaItem(3, "Vacuna 3", 1, "12/12/2000"));
         vacunas.add(new VacunaItem(4, "Vacuna 4", 0, "12/12/2000"));
         vacunas.add(new VacunaItem(5, "Vacuna 5", 1, "12/12/2000"));
-
-        adapter = new VacunaAdapter(this, vacunas);
-        list.setAdapter(adapter);
+        return vacunas;
     }
 }

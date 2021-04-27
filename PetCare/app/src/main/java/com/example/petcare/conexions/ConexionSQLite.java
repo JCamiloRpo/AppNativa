@@ -92,6 +92,31 @@ public class ConexionSQLite {
 
     /**
      * Metodo para leer infromacion de la BD.
+     * Reciben la tabla y la condicion a buscar
+     * @return un arreglo con la misma estructura de una tabla
+     */
+    public String[][] Read(String table, String where){
+        String[][] result;
+        SQLiteDatabase db = conn.getReadableDatabase();
+        String query = "SELECT * FROM "+table+" WHERE "+where;
+        Cursor c= db.rawQuery(query, null);
+        if (c.moveToFirst()) {
+            result = new String[c.getCount()][c.getColumnCount()];
+            int i=0;
+            do {
+                for(int j=0; j<c.getColumnCount(); j++)
+                    result[i][j] = c.getString(j);
+                i++;
+            } while (c.moveToNext());
+        }
+        else
+            result=new String[0][0];
+        db.close();
+        return result;
+    }
+
+    /**
+     * Metodo para leer infromacion de la BD.
      * Reciben la tabla, las columnas y la condicion a buscar
      * @return un arreglo con la misma estructura de una tabla
      */
