@@ -1,8 +1,8 @@
-package com.example.petcare.activities;
+package com.upb.petcare.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import com.example.petcare.R;
+import com.upb.petcare.R;
 import android.os.Bundle;
 
 public class InfoActivity extends AppCompatActivity {

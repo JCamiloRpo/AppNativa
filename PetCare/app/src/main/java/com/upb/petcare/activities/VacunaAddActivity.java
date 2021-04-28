@@ -1,4 +1,4 @@
-package com.example.petcare.activities;
+package com.upb.petcare.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,8 +12,8 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
-import com.example.petcare.R;
-import com.example.petcare.entities.VacunaItem;
+import com.upb.petcare.R;
+import com.upb.petcare.entities.VacunaItem;
 
 import java.util.Calendar;
 

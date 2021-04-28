@@ -1,7 +1,6 @@
-package com.example.petcare.entities;
+package com.upb.petcare.entities;
 
 import android.content.ContentValues;
-import android.net.Uri;
 
 public class MascotaItem {
 

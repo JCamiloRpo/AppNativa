@@ -1,4 +1,4 @@
-package com.example.petcare.activities;
+package com.upb.petcare.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,9 +13,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.petcare.dialogs.AvatarDialog;
-import com.example.petcare.entities.MascotaItem;
-import com.example.petcare.R;
+import com.upb.petcare.dialogs.AvatarDialog;
+import com.upb.petcare.entities.MascotaItem;
+import com.upb.petcare.R;
 
 public class MascotaAddActivity extends AppCompatActivity {
     //public static final int PICK_IMG = 10;

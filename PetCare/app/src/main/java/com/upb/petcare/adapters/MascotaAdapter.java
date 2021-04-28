@@ -1,4 +1,4 @@
-package com.example.petcare.adapters;
+package com.upb.petcare.adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,9 +11,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.petcare.activities.VacunaActivity;
-import com.example.petcare.entities.MascotaItem;
-import com.example.petcare.R;
+import com.upb.petcare.activities.VacunaActivity;
+import com.upb.petcare.entities.MascotaItem;
+import com.upb.petcare.R;
 
 import java.util.ArrayList;
 
@@ -48,7 +48,7 @@ public class MascotaAdapter extends BaseAdapter {
         TextView txtEdad = convertView.findViewById(R.id.TxtItemEdadPet);
         TextView txtVacuna = convertView.findViewById(R.id.TxtItemVacunaPet);
 
-        imgPet.setImageURI(Uri.parse("android.resource://com.example.petcare/drawable/"+item.getImagen()));
+        imgPet.setImageURI(Uri.parse("android.resource://com.upb.petcare/drawable/"+item.getImagen()));
         txtNombre.setText(item.getNombre());
         txtEdad.setText(item.getEdad()+" años");
         if(item.getVacuna().equals("Sin vacunas")) txtVacuna.setText(item.getVacuna());

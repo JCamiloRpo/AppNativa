@@ -1,4 +1,4 @@
-package com.example.petcare.activities;
+package com.upb.petcare.activities;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +12,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.petcare.R;
-import com.example.petcare.conexions.ConexionSQLite;
-import com.example.petcare.dialogs.AvatarDialog;
-import com.example.petcare.entities.MascotaItem;
+import com.upb.petcare.R;
+import com.upb.petcare.conexions.ConexionSQLite;
+import com.upb.petcare.dialogs.AvatarDialog;
+import com.upb.petcare.entities.MascotaItem;
 
 public class MascotaEditActivity extends AppCompatActivity {
     public static String img = "";
@@ -78,7 +77,7 @@ public class MascotaEditActivity extends AppCompatActivity {
 
     private void consultar(){
         String[][] pet = MascotaActivity.sql.Read(ConexionSQLite.TABLE_MASCOTA, "*", "ID="+VacunaActivity.idMascota);
-        imgPet.setImageURI(Uri.parse("android.resource://com.example.petcare/drawable/"+pet[0][1]));
+        imgPet.setImageURI(Uri.parse("android.resource://com.upb.petcare/drawable/"+pet[0][1]));
         txtNombre.setText(pet[0][2]);
         txtTipo.setText(pet[0][3]);
         txtEdad.setText(pet[0][4]);

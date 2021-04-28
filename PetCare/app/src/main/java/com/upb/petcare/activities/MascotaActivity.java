@@ -1,4 +1,4 @@
-package com.example.petcare.activities;
+package com.upb.petcare.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,10 +10,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
-import com.example.petcare.conexions.ConexionSQLite;
-import com.example.petcare.adapters.MascotaAdapter;
-import com.example.petcare.entities.MascotaItem;
-import com.example.petcare.R;
+import com.upb.petcare.conexions.ConexionSQLite;
+import com.upb.petcare.adapters.MascotaAdapter;
+import com.upb.petcare.entities.MascotaItem;
+import com.upb.petcare.R;
 
 import java.util.ArrayList;
 

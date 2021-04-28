@@ -1,4 +1,4 @@
-package com.example.petcare.adapters;
+package com.upb.petcare.adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,9 +10,9 @@ import android.widget.BaseAdapter;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.example.petcare.R;
-import com.example.petcare.activities.VacunaEditActivity;
-import com.example.petcare.entities.VacunaItem;
+import com.upb.petcare.R;
+import com.upb.petcare.activities.VacunaEditActivity;
+import com.upb.petcare.entities.VacunaItem;
 
 import java.util.ArrayList;
 

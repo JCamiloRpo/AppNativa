@@ -1,4 +1,4 @@
-package com.example.petcare.dialogs;
+package com.upb.petcare.dialogs;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -10,14 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
-
-import com.example.petcare.R;
-import com.example.petcare.activities.MascotaAddActivity;
-import com.example.petcare.activities.MascotaEditActivity;
+import com.upb.petcare.R;
+import com.upb.petcare.activities.MascotaAddActivity;
+import com.upb.petcare.activities.MascotaEditActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -83,12 +81,12 @@ public class AvatarDialog extends DialogFragment implements View.OnClickListener
         if(MascotaAddActivity.add){
             MascotaAddActivity.img = view.getContentDescription().toString().toLowerCase();
             imgPet = actividad.findViewById(R.id.ImgPet);
-            imgPet.setImageURI(Uri.parse("android.resource://com.example.petcare/drawable/"+ MascotaAddActivity.img));
+            imgPet.setImageURI(Uri.parse("android.resource://com.upb.petcare/drawable/"+ MascotaAddActivity.img));
         }
         else {
             MascotaEditActivity.img = view.getContentDescription().toString().toLowerCase();
             imgPet = actividad.findViewById(R.id.ImgPetEdit);
-            imgPet.setImageURI(Uri.parse("android.resource://com.example.petcare/drawable/"+ MascotaEditActivity.img));
+            imgPet.setImageURI(Uri.parse("android.resource://com.upb.petcare/drawable/"+ MascotaEditActivity.img));
         }
         dismiss();
     }

@@ -1,12 +1,12 @@
-package com.example.petcare.conexions;
+package com.upb.petcare.conexions;
 
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.example.petcare.entities.MascotaItem;
-import com.example.petcare.entities.VacunaItem;
+import com.upb.petcare.entities.MascotaItem;
+import com.upb.petcare.entities.VacunaItem;
 
 public class ConexionSQLite {
     public static final String TABLE_MASCOTA = "Mascota";
