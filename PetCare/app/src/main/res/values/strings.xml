@@ -43,6 +43,13 @@
     <string name="raton">Raton</string>
     <string name="vaca">Vaca</string>
     <string name="zorro">Zorro</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hombre">Hombre</string>
+    <string name="nombre1">Juan Camilo Restrepo</string>
+    <string name="correo1">12camilorpo@gmail.com</string>
+    <string name="contactanos">Contactanos</string>
+    <string name="mujer">mujer</string>
+    <string name="carolina_monsalve">Carolina Monsalve</string>
+    <string name="carolina_monsalvev_upb_edu_co">carolina.monsalvev@upb.edu.co</string>
+    <string name="descripcion">Descripción</string>
+    <string name="descripcion_text">Esta es una aplicación que tiene como objetivo llevar el registro de todas las vacunas de las diferentes mascotas que el usuario tenga en su vivienda.</string>
 </resources>

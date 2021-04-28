@@ -9,46 +9,61 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PetCare">
-        <activity android:name="com.example.petcare.activities.MascotaActivity" />
-        <activity android:name="com.example.petcare.activities.MascotaAddActivity"
+        <activity android:name=".activities.MascotaActivity" />
+        <activity
+            android:name=".activities.MascotaAddActivity"
             android:label="@string/agregarpet"
-            android:parentActivityName="com.example.petcare.activities.MascotaActivity">
+            android:parentActivityName=".activities.MascotaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petcare.activities.MascotaActivity" />
         </activity>
-        <activity android:name="com.example.petcare.activities.MascotaEditActivity"
+        <activity
+            android:name=".activities.MascotaEditActivity"
             android:label="@string/editarpet"
-            android:parentActivityName="com.example.petcare.activities.VacunaActivity">
+            android:parentActivityName=".activities.VacunaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petcare.activities.VacunaActivity" />
         </activity>
-        <activity android:name="com.example.petcare.activities.VacunaActivity"
-            android:label="@string/nombrepet"
-            android:parentActivityName="com.example.petcare.activities.MascotaActivity">
+        <activity
+            android:name=".activities.InfoActivity"
+            android:label="@string/info"
+            android:parentActivityName=".activities.MascotaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petcare.activities.MascotaActivity" />
         </activity>
-        <activity android:name="com.example.petcare.activities.VacunaAddActivity"
+        <activity
+            android:name=".activities.VacunaActivity"
+            android:label="@string/nombrepet"
+            android:parentActivityName=".activities.MascotaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.petcare.activities.MascotaActivity" />
+        </activity>
+        <activity
+            android:name=".activities.VacunaAddActivity"
             android:label="@string/agregarvacu"
-            android:parentActivityName="com.example.petcare.activities.VacunaActivity">
+            android:parentActivityName=".activities.VacunaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petcare.activities.VacunaActivity" />
         </activity>
-        <activity android:name="com.example.petcare.activities.VacunaEditActivity"
+        <activity
+            android:name=".activities.VacunaEditActivity"
             android:label="@string/editarvacu"
-            android:parentActivityName="com.example.petcare.activities.VacunaActivity">
+            android:parentActivityName=".activities.VacunaActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.petcare.activities.VacunaActivity" />
         </activity>
-        <activity android:name="com.example.petcare.activities.SplashActivity"
+        <activity
+            android:name=".activities.SplashActivity"
             android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

@@ -46,8 +46,8 @@ public class MascotaActivity extends AppCompatActivity {
                 this.finish();
                 return true;
             case R.id.action_info:
-                /*Intent i = new Intent(getApplicationContext(), MascotaEditActivity.class);
-                startActivity(i);*/
+                Intent i = new Intent(getApplicationContext(), InfoActivity.class);
+                startActivity(i);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
